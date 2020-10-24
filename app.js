@@ -13,18 +13,18 @@ button.onclick = () => {
   n = Number(oldValue) + Number(n);
   // console.log(n);
   for (let j = numberInTheShape; j <= n; j++) {
-    var box = document.createElement("div");
-    box.innerHTML += numberInTheShape;
+    var shape = document.createElement("div");
+    shape.innerHTML += numberInTheShape;
     if (square.checked) {
-      box.classList.add("square");
+      shape.classList.add("square");
     } else if (circle.checked) {
-      box.classList.add("circle");
+      shape.classList.add("circle");
     } else if (rect.checked) {
-      box.classList.add("rectangle");
+      shape.classList.add("rectangle");
     } else {
       document.write("invalid Input");
     }
-    $box.appendChild(box);
+    $box.appendChild(shape);
     numberInTheShape++;
     oldValue = document.getElementById("box").lastElementChild.innerHTML;
   }
