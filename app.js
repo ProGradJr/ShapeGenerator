@@ -17,16 +17,14 @@ button.onclick = () => {
     box.innerHTML += numberInTheShape;
     if (square.checked) {
       box.classList.add("square");
-      $box.appendChild(box);
     } else if (circle.checked) {
       box.classList.add("circle");
-      $box.appendChild(box);
     } else if (rect.checked) {
       box.classList.add("rectangle");
-      $box.appendChild(box);
     } else {
       document.write("invalid Input");
     }
+    $box.appendChild(box);
     numberInTheShape++;
     oldValue = document.getElementById("box").lastElementChild.innerHTML;
   }
